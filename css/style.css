@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+
+*{
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body{
+    height: 100%;
+    font-family: 'Unica One', cursive;
+    font-size: 62.5%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #e76f51;
+    padding: 0;
+    margin: 0;
+}
+
+.calculator-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 40rem;
+    border: 0.2rem solid #fff;
+    border-radius: 0.8rem;
+    background-color: #264653;
+    padding: 1.5rem;
+}
+
+.result-container {
+    width: 100%;
+    height: 10rem;
+    border: 0.2rem solid #fff;
+    border-radius: 0.8rem;
+    margin: 0 auto;
+    background-color: #2a9d8f;
+}
+
+span {
+    display: block;
+    height: 4.8rem;
+    color: #fff;
+    font-size: 3rem;
+    text-align: end;
+    line-height: 4.8rem;
+    padding: 0 1rem;
+}
+
+.buttons-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.button {
+    height: 6rem;
+    color: #fff;
+    border: 0.2rem solid #fff;
+    border-radius: 0.8rem;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 6rem;
+    background-color: #2a9d8f;
+    cursor: pointer;
+}
