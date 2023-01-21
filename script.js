@@ -145,6 +145,14 @@ function finalResult(operationArray) {
     };
 };
 
+function keyboardInput(e) {
+    if (/^\d+$/.test(e.key)) {
+        displayNumbers(e.key);
+    }else if (e.key == '.') {
+        setDecimalPoint();
+    };
+}
+
 const buttons = document.querySelectorAll('.button');
 const numbers = document.querySelectorAll('#number');
 const operators = document.querySelectorAll('#operator');
@@ -216,3 +224,11 @@ equal.addEventListener('click', () => {
     finalResult(operationArray);
     operationArray = [];
 });
+
+window.addEventListener('keydown', (e) => {
+    keyboardInput(e);
+    operators.forEach(operator => {
+        operator.classList.remove('active');
+    });
+    equal.classList.remove('active');
+})
